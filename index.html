@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login/Signup Section -->
+    <div id="auth-section">
+        <h2 id="auth-title">Login</h2>
+        <form id="auth-form">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" id="auth-submit">Login</button>
+            <p id="auth-toggle">Don't have an account? <a href="#" id="toggle-auth">Signup</a></p>
+        </form>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" style="display: none;">
+        <div id="quiz-header">
+            <h2>Quiz Game</h2>
+            <div id="progress-bar"></div>
+        </div>
+        <div id="question-container">
+            <p id="question"></p>
+            <ul id="options">
+                <!-- Options will be dynamically added here -->
+            </ul>
+        </div>
+        <button id="submit-answer" disabled>Submit Answer</button>
+        <p id="feedback"></p>
+        <button id="next-question" style="display: none;">Next Question</button>
+    </div>
+
+    <!-- Final Score Section -->
+    <div id="result-section" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <p id="final-score"></p>
+        <button id="restart-quiz">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
